@@ -8,12 +8,12 @@
 Summary:	Apache::Test - Test.pm wrapper with helpers for testing Apache
 Summary(pl):	Apache::Test - wrapper na Test.pm z funkcjami do testowania Apache
 Name:		perl-Apache-Test
-Version:	1.05
+Version:	1.06
 Release:	1
 License:	Apache Software License 1.1
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	53654c4e47240d2494db010a0a15751d
+# Source0-md5:	27c7096b027fa1d477b260c54d49c455
 URL:		http://httpd.apache.org/test/
 BuildRequires:	apache-mod_perl
 BuildRequires:	perl-devel >= 5.8.0
@@ -42,7 +42,7 @@ pomocniczymi do testowania serwera Apache.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-
+rm .mypacklist # contains list of files - install will try to remove them
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
