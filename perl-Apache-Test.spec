@@ -9,12 +9,12 @@
 Summary:	Apache::Test - Test.pm wrapper with helpers for testing Apache
 Summary(pl):	Apache::Test - wrapper na Test.pm z funkcjami do testowania Apache
 Name:		perl-Apache-Test
-Version:	1.19
+Version:	1.26
 Release:	1
 License:	Apache Software License 2.0
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	795c1fcefd0f21b126f573fc46427139
+# Source0-md5:	0626e18f95e36b61b035e7485295128e
 URL:		http://httpd.apache.org/test/
 %{?with_autodeps:BuildRequires:	apache-mod_perl}
 BuildRequires:	perl-devel >= 1:5.8.0
@@ -23,8 +23,8 @@ BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Apache::Test is a wrapper around the standard Test.pm with helpers
-for testing an Apache server.
+Apache::Test is a wrapper around the standard Test.pm with helpers for
+testing an Apache server.
 
 %description -l pl
 Apache::Test to modu³ opakowuj±cy standardowy Test.pm z funkcjami
@@ -42,9 +42,12 @@ pomocniczymi do testowania serwera Apache.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-rm .mypacklist # contains list of files - install will try to remove them
-%{__make} install \
+rm -f .mypacklist # contains list of files - install will try to remove them
+%{__make} pure_install \
 	DESTDIR=$RPM_BUILD_ROOT
+
+rm -f $RPM_BUILD_ROOT%{perl_vendorlib}/Bundle/ApacheTest.pm
+rm -f $RPM_BUILD_ROOT%{perl_vendorarch}/auto/Apache/Test/.packlist
 
 %clean
 rm -rf $RPM_BUILD_ROOT
