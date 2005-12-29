@@ -47,6 +47,7 @@ rm -f .mypacklist # contains list of files - install will try to remove them
 	DESTDIR=$RPM_BUILD_ROOT
 
 rm -f $RPM_BUILD_ROOT%{perl_vendorlib}/Bundle/ApacheTest.pm
+rm -f $RPM_BUILD_ROOT%{perl_vendorlib}/Apache/TestConfigData.pm
 rm -f $RPM_BUILD_ROOT%{perl_vendorarch}/auto/Apache/Test/.packlist
 
 %clean
