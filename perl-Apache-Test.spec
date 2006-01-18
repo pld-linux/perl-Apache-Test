@@ -1,6 +1,6 @@
 #
 # Conditional build:
-%bcond_without	autodeps	# don't BR packages needed only for resolving deps
+%bcond_with	autodeps	# don't BR packages needed only for resolving deps
 %bcond_with	tests		# perform "make test" (requires configured test server)
 #
 %include	/usr/lib/rpm/macros.perl
@@ -10,7 +10,7 @@ Summary:	Apache::Test - Test.pm wrapper with helpers for testing Apache
 Summary(pl):	Apache::Test - wrapper na Test.pm z funkcjami do testowania Apache
 Name:		perl-Apache-Test
 Version:	1.27
-Release:	1
+Release:	1.5
 License:	Apache Software License 2.0
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
