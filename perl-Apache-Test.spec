@@ -13,7 +13,7 @@ Release:	1
 License:	Apache Software License 2.0
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	4a87aa4e388fe9dd3d19c71d3e414caf
+# Source0-md5:	76ca771bb9d36b6215e7f418a7fd5e9a
 URL:		http://httpd.apache.org/test/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
