@@ -8,16 +8,21 @@
 Summary:	Apache::Test - Test.pm wrapper with helpers for testing Apache
 Summary(pl):	Apache::Test - wrapper na Test.pm z funkcjami do testowania Apache
 Name:		perl-Apache-Test
-Version:	1.28
-Release:	2
+%define	_rc	-rc1
+Version:	1.29
+Release:	0.%(echo %{_rc} | sed -e s/-//).1
 Epoch:		1
 License:	Apache Software License 2.0
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	76ca771bb9d36b6215e7f418a7fd5e9a
+#Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
+Source0:	http://people.apache.org/~pgollucci/at/%{pdir}-%{pnam}-%{version}%{_rc}.tar.gz
+# Source0-md5:	6442b0dcca3436f25ba673a69bdb0b4f
 URL:		http://httpd.apache.org/test/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
+%if %{with tests}
+BuildRequires:	apache-mod_env
+%endif
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -33,7 +38,7 @@ Apache::Test to modu³ opakowuj±cy standardowy Test.pm z funkcjami
 pomocniczymi do testowania serwera Apache.
 
 %prep
-%setup -q -n %{pdir}-%{pnam}-%{version}
+%setup -q -n %{pdir}-%{pnam}-%{version}%{_rc}
 
 %build
 %{__perl} Makefile.PL \
