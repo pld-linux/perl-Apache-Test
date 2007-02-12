@@ -6,7 +6,7 @@
 %define		pdir	Apache
 %define		pnam	Test
 Summary:	Apache::Test - Test.pm wrapper with helpers for testing Apache
-Summary(pl):	Apache::Test - wrapper na Test.pm z funkcjami do testowania Apache
+Summary(pl.UTF-8):   Apache::Test - wrapper na Test.pm z funkcjami do testowania Apache
 Name:		perl-Apache-Test
 Version:	1.29
 Release:	1
@@ -31,8 +31,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Apache::Test is a wrapper around the standard Test.pm with helpers for
 testing an Apache server.
 
-%description -l pl
-Apache::Test to modu³ opakowuj±cy standardowy Test.pm z funkcjami
+%description -l pl.UTF-8
+Apache::Test to moduÅ‚ opakowujÄ…cy standardowy Test.pm z funkcjami
 pomocniczymi do testowania serwera Apache.
 
 %prep
