@@ -6,7 +6,7 @@
 %define		pdir	Apache
 %define		pnam	Test
 Summary:	Apache::Test - Test.pm wrapper with helpers for testing Apache
-Summary(pl.UTF-8):   Apache::Test - wrapper na Test.pm z funkcjami do testowania Apache
+Summary(pl.UTF-8):	Apache::Test - wrapper na Test.pm z funkcjami do testowania Apache
 Name:		perl-Apache-Test
 Version:	1.29
 Release:	1
