@@ -9,7 +9,7 @@ Summary:	Apache::Test - Test.pm wrapper with helpers for testing Apache
 Summary(pl.UTF-8):	Apache::Test - wrapper na Test.pm z funkcjami do testowania Apache
 Name:		perl-Apache-Test
 Version:	1.30
-Release:	1
+Release:	2
 Epoch:		1
 License:	Apache Software License 2.0
 Group:		Development/Languages/Perl
@@ -55,6 +55,9 @@ rm -f $RPM_BUILD_ROOT%{perl_vendorlib}/Bundle/ApacheTest.pm
 rm -f $RPM_BUILD_ROOT%{perl_vendorlib}/Apache/TestConfigData.pm
 rm -f $RPM_BUILD_ROOT%{perl_vendorarch}/auto/Apache/Test/.packlist
 
+#mans make conflict with identical mans from perl-mod_perl
+rm -rf $RPM_BUILD_ROOT%{_mandir}
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -62,4 +65,3 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc Changes LICENSE README SUPPORT ToDo
 %{perl_vendorlib}/Apache/Test*.pm
-%{_mandir}/man3/*
