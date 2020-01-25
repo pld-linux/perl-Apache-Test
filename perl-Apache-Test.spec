@@ -2,7 +2,6 @@
 # Conditional build:
 %bcond_with	tests		# perform "make test" (requires configured test server)
 #
-%include	/usr/lib/rpm/macros.perl
 %define		pdir	Apache
 %define		pnam	Test
 Summary:	Apache::Test - Test.pm wrapper with helpers for testing Apache
