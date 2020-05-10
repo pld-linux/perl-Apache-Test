@@ -8,7 +8,7 @@ Summary:	Apache::Test - Test.pm wrapper with helpers for testing Apache
 Summary(pl.UTF-8):	Apache::Test - wrapper na Test.pm z funkcjami do testowania Apache
 Name:		perl-Apache-Test
 Version:	1.37
-Release:	1
+Release:	2
 Epoch:		1
 License:	Apache Software License 2.0
 Group:		Development/Languages/Perl
